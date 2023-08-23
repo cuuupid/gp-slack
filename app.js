@@ -11,9 +11,6 @@ const app = new Vue({
       // perform following cURL as a fetch:
       const d = await fetch('https://slack.com/api/oauth.v2.access', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/www-form-urlencoded'
-        },
         body: new URLSearchParams({
           "code": code,
           "client_id": "4057547125217.5786059574244",
