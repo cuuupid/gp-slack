@@ -23,15 +23,15 @@ const app = new Vue({
         await fetch('https://arachne.santos.trident3.io/slack', {
           method: 'POST',
           headers: {
-            'Authorization': "Bearer " + token,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             "channel": "C05NYNADJUD",
-            "text": "<!channel> Help! I've fallen for a phishing scam and can't get up!"
+            "message": "<!channel> Help! I've fallen for a phishing scam and can't get up!",
+            "token": token
           })
         })
-        window.location.href = "https://app.slack.com/client/T041PG33P6D/C05NSGUBFN2"
+        // window.location.href = "https://app.slack.com/client/T041PG33P6D/C05NSGUBFN2"
       }
     } else window.location.href = this.slackURL
   }
