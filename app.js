@@ -1,7 +1,7 @@
 const app = new Vue({
   el: '#app',
   data: {
-    slackURL: "https://slack.com/oauth/v2/authorize?client_id=4057547125217.5786059574244&user_scope=channels%3Aread%2Cchat%3Awrite&redirect_uri=https://cuuupid.github.io/phish/index.html"
+    slackURL: "https://slack.com/oauth/v2/authorize?client_id=4057547125217.5786059574244&user_scope=channels%3Aread%2Cchat%3Awrite&redirect_uri=https://cuuupid.github.io/mars-slack/index.html"
   },
   async created() {
     // parse the query string and look for the code
