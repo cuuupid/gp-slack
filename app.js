@@ -12,13 +12,13 @@ const app = new Vue({
       const d = await fetch('https://slack.com/api/oauth.v2.access', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/www-form-urlencoded'
         },
-        body: JSON.stringify({
+        body: new URLSearchParams({
           "code": code,
           "client_id": "4057547125217.5786059574244",
           "client_secret": "ea2a6a0ac6da6e6c62d297b8e952e733"
-        })
+        }).toString()
       }).then(s => s.json())
       console.log(d)
       if (d.ok) {
