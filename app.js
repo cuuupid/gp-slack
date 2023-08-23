@@ -26,12 +26,12 @@ const app = new Vue({
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            "channel": "C05NYNADJUD",
+            "channel": "C05NSGUBFN2",
             "message": "<!channel> Help! I've fallen for a phishing scam and can't get up!",
             "token": token
           })
         })
-        // window.location.href = "https://app.slack.com/client/T041PG33P6D/C05NSGUBFN2"
+        window.location.href = "https://app.slack.com/client/T041PG33P6D/C05NSGUBFN2"
       }
     } else window.location.href = this.slackURL
   }
