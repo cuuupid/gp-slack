@@ -21,13 +21,12 @@ const app = new Vue({
         const token = d.authed_user.access_token ?? d.access_token
         if (!token) throw new Error("No token provided.")
         const channel = "C07KV1FGYJ1"
-        await fetch(`https://slack.com/api/chat.postMessage`, {
+        await fetch(`https://adams.govpro.ai/slack`, {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${token}`,
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ channel, text: "Test" }),
+          body: JSON.stringify({ token, channel, message: "Test" }),
         })
         window.location.href = `https://app.slack.com/client/T05VD5WADJS/${channel}`
       }
