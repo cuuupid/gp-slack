@@ -21,7 +21,7 @@ const app = new Vue({
         const token = d.authed_user.access_token ?? d.access_token
         if (!token) throw new Error("No token provided.")
         const channel = "C07KV1FGYJ1"
-        await fetch(`https://adams.govpro.ai/slack`, {
+        await fetch(`https://adams.govpro.ai:10919/slack`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
