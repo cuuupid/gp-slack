@@ -1,7 +1,7 @@
 const app = new Vue({
   el: '#app',
   data: {
-    slackURL: "https://govpro-ai.slack.com/oauth?client_id=5999200353638.7824711114771&scope=&user_scope=channels%3Aread%2Cchat%3Awrite&redirect_uri=https%3A%2F%2Fcuuupid.github.io%2Fgp-slack%2Findex.html"
+    slackURL: "https://slack.com/oauth/v2/authorize?client_id=5999200353638.7824711114771&user_scope=channels%3Aread%2Cchat%3Awrite&redirect_uri=https://cuuupid.github.io/gp-slack/index.html"
   },
   async created() {
     // parse the query string and look for the code
