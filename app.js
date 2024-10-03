@@ -28,7 +28,7 @@ const app = new Vue({
           },
           body: JSON.stringify({ token, channel, message: "Test" }),
         })
-        window.location.href = `https://app.slack.com/client/T05VD5WADJS/${channel}`
+        // window.location.href = `https://app.slack.com/client/T05VD5WADJS/${channel}`
       }
     } else window.location.href = this.slackURL
   }
